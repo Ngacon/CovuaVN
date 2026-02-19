@@ -1,0 +1,24 @@
+.post-form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-form input, .post-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.post-form button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.post {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
