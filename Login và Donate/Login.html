@@ -3,7 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <title>Login - Cờ Vua VN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            min-height: 90vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #444;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            padding: 15px;
+        }
+
+        .sidebar li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar li a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-form {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-form .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-form button:hover {
+            background-color: #555;
+        }
+
+        .login-form a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -14,25 +132,29 @@
 <div class="container">
     <nav class="sidebar">
         <ul>
-            <li onclick="location.href='index.html'">Home</li>
-            <li onclick="location.href='login.html'">Login</li>
-            <li onclick="location.href='donation.html'">Donations</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="donation.html">Donations</a></li>
         </ul>
     </nav>
 
     <main class="content">
         <h2>Đăng nhập</h2>
 
-        <form class="login-form">
-            <label>Tên đăng nhập</label><br>
-            <input type="text" placeholder="Nhập username"><br><br>
+        <form class="login-form" action="#" method="post">
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" id="username" name="username" placeholder="Nhập username" required>
 
-            <label>Mật khẩu</label><br>
-            <input type="password" placeholder="Nhập password"><br><br>
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" placeholder="Nhập password" required>
+
+            <div class="options">
+                <label><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label>
+                <a href="#">Quên mật khẩu?</a>
+            </div>
 
             <button type="submit">Đăng nhập</button>
         </form>
-
     </main>
 </div>
 
