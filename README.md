@@ -13,3 +13,5 @@ Trang web này được dự kiến (21.02.2026) là sẽ có các mục sau:
 
 CallMeAspect phụ trách UI và frontend (html, css và js) Bảo gồm trang web trông như thế nào. Ngoài ra còn làm thêm phần donate và login của website
 Ngacon phụ trách Backend bao gồm logic của website và các thứ khác liên quan đến phần kỹ thuật
+
+**Hiện tại vẫn đang thi công** 20.02.2026
